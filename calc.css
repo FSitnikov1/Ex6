@@ -1,0 +1,11 @@
+body{
+    background-size: cover;
+    background: linear-gradient(to bottom right, #ffffff -83%, #000000 186%) no-repeat fixed 20% 73%;
+
+}
+#main {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}

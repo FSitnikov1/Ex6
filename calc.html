@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Подключение Bootstrap 5.1.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Подключение css файла -->
+    <link rel="stylesheet" href="calc.css">
+    <!-- Название веб-страницы во вкладках -->
+    <title>Калькулятор стоимости</title>
+</head>
+<body>
+<div id="main" class="d-flex flex-nowrap flex-column bd-highlight ">
+    <header id="header" class="order-first">
+        <div class="row text-center">
+            <div class="container col-8 col-sm-6">
+                <h1>Калькулятор</h1>
+            </div>
+        </div>
+    </header>
+    <div id="navi" class="text-center">
+        <nav class="d-inline-flex justify-content-center flex-column flex-sm-row">
+            <a class="d-inline nav-link" href="index.html"><h5>Главная</h5></a>
+            <a class="d-inline nav-link-active" href="calc.html">Калькулятор стоимости</a>
+        </nav>
+    </div>
+    <div id="с1" class="text-center">
+        <div class="row justify-content-center">
+            <div class="container col-10 col-sm-12 m-2 p-2">
+                <h3>Калькулятор стоимости</h3>
+                <input type="text" id="type" class="m-1" placeholder="Укажите стоимость"> *
+                <input type="text" id="count" class="m-1" placeholder="Укажите количество"> =
+                <button onclick="calculate();" class="m-1">Рассчитать стоимость</button>
+                <div id="sum"></div>
+            </div>
+        </div>
+    </div>
+    <div id="с2" class="text-center">
+        <div class="row justify-content-center">
+            <div class="container col-10 col-sm-12">
+                <h3>Калькулятор стоимости продукта</h3>
+                <select onchange="calculate2()" id="typ" class="m-1" onclick="hid()">
+                    <option value="1">PC</option>
+                    <option value="2">PS</option>
+                    <option value="3">Xbox</option>
+                </select> *
+                <input onchange="calculate2()" type="text" id="county" class="m-1" placeholder="Укажите количество продукта">
+            </div>
+            <div class="container col-10 col-sm-12">
+                <div id="radio" hidden="true" class="btn-group btn-group-toggle m-2 p-2" data-toggle="buttons">
+                    <input onchange="calculate2()" type="radio" name="radio" class="m-1" value="1" checked> Электронное издание
+                    <input onchange="calculate2()" type="radio" name="radio" class="m-1" value="2"> Физическое издание
+                </div>
+                <br>
+                <div id="checkbox" hidden="true" class="btn-group btn-group-toggle m-2 p-2" data-toggle="buttons">
+                    <input onchange="calculate2()" type="checkbox" name="checkbox" class="m-1" value="1"> "Ticket" издание
+                    <input onchange="calculate2()" type="checkbox" name="checkbox" class="m-1" value="2"> GOTY издание
+                </div>
+                <div id="produce"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>
