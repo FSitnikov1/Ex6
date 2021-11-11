@@ -33,7 +33,7 @@
                 <h3>Калькулятор стоимости</h3>
                 <input type="text" id="type" class="m-1" placeholder="Укажите стоимость"> *
                 <input type="text" id="count" class="m-1" placeholder="Укажите количество"> =
-                <button onclick="calculate();" class="m-1">Рассчитать стоимость</button>
+                <button id="but1" class="m-1">Рассчитать стоимость</button>
                 <div id="sum"></div>
             </div>
         </div>
@@ -42,22 +42,22 @@
         <div class="row justify-content-center">
             <div class="container col-10 col-sm-12">
                 <h3>Калькулятор стоимости продукта</h3>
-                <select onchange="calculate2()" id="typ" class="m-1" onclick="hid()">
+                <select id="typ" class="m-1">
                     <option value="1">PC</option>
                     <option value="2">PS</option>
                     <option value="3">Xbox</option>
                 </select> *
-                <input onchange="calculate2()" type="text" id="county" class="m-1" placeholder="Укажите количество продукта">
+                <input type="text" id="county" class="m-1" placeholder="Укажите количество продукта">
             </div>
             <div class="container col-10 col-sm-12">
                 <div id="radio" hidden="true" class="btn-group btn-group-toggle m-2 p-2" data-toggle="buttons">
-                    <input onchange="calculate2()" type="radio" name="radio" class="m-1" value="1" checked> Электронное издание
-                    <input onchange="calculate2()" type="radio" name="radio" class="m-1" value="2"> Физическое издание
+                    <input id="r1" type="radio" name="radio" class="m-1" value="1" checked> Электронное издание
+                    <input id="r2" type="radio" name="radio" class="m-1" value="2"> Физическое издание
                 </div>
                 <br>
                 <div id="checkbox" hidden="true" class="btn-group btn-group-toggle m-2 p-2" data-toggle="buttons">
-                    <input onchange="calculate2()" type="checkbox" name="checkbox" class="m-1" value="1"> "Ticket" издание
-                    <input onchange="calculate2()" type="checkbox" name="checkbox" class="m-1" value="2"> GOTY издание
+                    <input id="chk1" type="checkbox" name="checkbox" class="m-1" value="1"> "Ticket" издание
+                    <input id="chk2" type="checkbox" name="checkbox" class="m-1" value="2"> GOTY издание
                 </div>
                 <div id="produce"></div>
             </div>

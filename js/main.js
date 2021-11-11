@@ -1,3 +1,15 @@
+window.addEventListener('DOMContentLoaded', function (event) {
+    console.log("DOM fully loaded and parsed");
+    document.getElementById("but1").addEventListener("click", calculate);
+    document.getElementById("typ").addEventListener("click", hid);
+    document.getElementById("county").addEventListener("change", calculate2);
+    document.getElementById("typ").addEventListener("change", calculate2);
+    document.getElementById("r1").addEventListener("change", calculate2);
+    document.getElementById("r2").addEventListener("change", calculate2);
+    document.getElementById("chk1").addEventListener("change", calculate2);
+    document.getElementById("chk2").addEventListener("change", calculate2);
+});
+
 function calculate() {
     let type, count, result;
     type = document.getElementById('type').value;
